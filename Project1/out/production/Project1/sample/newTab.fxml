@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <SplitPane dividerPositions="0.29797979797979796" prefHeight="572.0" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane>
+                    <children>
+                        <TreeView fx:id="fileTree" prefHeight="570.0" prefWidth="205.0" showRoot="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane>
+                    <children>
+                        <Button layoutX="332.0" layoutY="65.0" mnemonicParsing="false" onAction="#findFile" text="Поиск" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Label layoutX="18.0" layoutY="25.0" text="Текст" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                        <Label layoutX="250.0" layoutY="25.0" text="Тип файла" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                        <TextArea fx:id="ourText" layoutX="65.0" layoutY="21.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" />
+                        <TextArea fx:id="fileExtention" layoutX="337.0" layoutY="21.0" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="160.0" layoutY="518.0" mnemonicParsing="false" onAction="#nextWord" text="След. слово" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Button layoutX="38.0" layoutY="518.0" mnemonicParsing="false" onAction="#backWord" text="Пред. слово" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Button layoutX="315.0" layoutY="518.0" mnemonicParsing="false" onAction="#highlightAll" text="Выделить всё" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Button layoutX="580.0" layoutY="518.0" mnemonicParsing="false" onAction="#scrollUp" text="Вверх" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Button layoutX="680.0" layoutY="518.0" mnemonicParsing="false" onAction="#scrollDown" text="Вниз " textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <Button layoutX="550.0" layoutY="19.0" mnemonicParsing="false" onAction="#openDirectory" text="Выбрать папку" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                        <TextArea fx:id="Content" editable="false" layoutX="0.0" layoutY="100.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefRowCount="5000000" prefWidth="800.0" wrapText="true" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
